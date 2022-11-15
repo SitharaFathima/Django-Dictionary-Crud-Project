@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        {% load static %}
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{{title}}</title>
+        <link rel="stylesheet" href="{% static './css/dict-style.css' %}" />
+    </head>
+    <body>
+        <section class="container">
+            <header>
+                <h1 class="left">
+                    <a href="./index.html">
+                        <img
+                            src="{% static 'images/logo.png' %}"
+                            alt="Logo"
+                        />
+                    </a>
+                </h1>
+                <div class="right">
+                    {% if request.user.is_authenticated %}
+                        <span class="one">{{request.user.first_name}} {{request.user.last_name}}</span>
+                        <a href="{% url 'users:logout' %}" class="login"> Logout </a>
+                    {% else %}
+                        <a href="{% url 'users:login' %}" class="login"> Login </a>
+                    {% endif %}
+                <div>
+            </header>
+            <div class="box">
+                <h2 class="main">DICTIONARY</h2>
+                <div class="heading">
+                    <h3>What word do you want to look up?</h3>
+                    <a class="button" href="{% url 'dictionary:create_word' %}">Add Word</a>
+                </div>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <div class="form-field">
+                        <input type="text" placeholder="Search for a word..." name="search_word" />
+                        <button type="submit" class="submit-btn">
+                            <img src="{% static './images/search-icon.png' %}" alt="Search" />
+                        </button>
+                    </div>
+                </form>
+                <ul class="result" >
+                    {% if show %}
+                        <h2>{{word}}</h2>
+                        {% if error_msg %}
+                            <p class="error">{{error_msg}}</p>
+                        {% endif %}
+                        {% for meaning in meanings %}
+                            <li>
+                                {{meaning.meaning}}
+                            </li>
+                        {% endfor %}
+                    {% else %}
+                        <li>
+                            <h2>Search a word</h2>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+            
+        </section>
+        
+    </body>
+</html>

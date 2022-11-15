@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'gorditaregular';
+    src: url('../fonts/gordita_regular-webfont.woff2') format('woff2'),
+         url('../fonts/gordita_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "gorditaregular";
+}
+section.container {
+   
+}
+section.container header {
+    background-color: #E3E3E3;
+    padding: 30px 140px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px;
+    justify-content: space-between;
+}
+section.container header h1.left {
+    width: 60px;
+}
+section.container header h1.left a {
+    display: block;
+}
+section.container header h1.left a img{
+    display: block;
+    width: 100%;
+}
+section.container  header a.login {
+    background-color:  #228B22;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    display: inline-block;
+    text-decoration: none;
+}
+section.container header span.one{
+    background-color: #228B22;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    display: inline-block;
+    margin-right: 20px;
+}
+section.container div.box{
+    width: 70%;
+    margin: 0 auto;
+}
+section.container div.box h2.main{
+    font-size: 30px;
+    color: #000080;
+    text-align: center;
+    margin-bottom: 70px;
+}
+section.container div.box div.heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+section.container div.box div.heading a.button {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background-color:  #228B22;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    font-weight: 900;
+}
+section.container div.box div.heading  h3 {
+    font-size: 20px;
+    color:  #228B22;
+}
+section.container form {
+    width: 100%;
+    border: 2px solid  #228B22;
+    padding: 6px;
+    border-radius: 8px;
+    margin: 30px 0;
+}
+section.container form div.form-field {
+    display: flex;
+    position: relative;
+}
+section.container form div.form-field input {
+    flex: 1;
+    height:40px ;
+    border: none;
+    background: #fff;
+    font-size: 18px;
+}
+section.container form div.form-field input:focus{
+    border: none;
+    outline: none;
+}
+section.container form div.form-field button {
+    height:40px ;
+    position: absolute;
+    right: 0;
+    border: none;
+    background: #fff;
+}
+section.container form div.form-field button img {
+    height: 100%;
+}
+
+ul.result {
+    list-style: none;
+}
+ul.result li {
+    color: #228B22;
+}
+ul.result h2 {
+    color: #228B22;
+    font-size: 18px;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+ul.result li p {
+    font-size: 20px;
+}
+ul.result p.error {
+    color: red;
+    text-align: center;
+    font-size: 24px;
+}

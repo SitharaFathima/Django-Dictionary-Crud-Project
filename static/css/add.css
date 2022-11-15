@@ -1,0 +1,76 @@
+
+@font-face {
+    font-family: 'gorditaregular';
+    src: url('../fonts/gordita_regular-webfont.woff2') format('woff2'),
+         url('../fonts/gordita_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}* {
+    margin: 0%;
+    padding: 0%;
+    font-family: 'gorditaregular';
+}
+
+section.container.one {
+    padding-top: 80px;
+    width:70%;
+    margin: 0 auto;
+}
+section.container form {
+    display: flex;
+    flex-direction: column;
+}
+section.container form div.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+section.container form div.form-field.btn {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+section.container form div.form-field.btn a {
+    display: block;
+    padding: 8px;
+    background-color: #000080;
+    width: 100px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 900;
+}
+section.container form div.form-field label {
+    color:#000080;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+section.container form div.form-field textarea,
+section.container form div.form-field input {
+    padding: 8px;
+    border: 1px solid #000080;
+    width: 70%;
+    font-size: 18px;
+    border-radius: 6px;
+}
+section.container form div.form-field input[type="submit"] {
+    width: 150px;
+    color: #fff;
+    background-color: #000080;
+    font-size: 20px;
+    display: inline;
+    border-radius: 6px;
+    font-size: 16px;
+}
+section.container form div.form-field select {
+    width: 200px;
+    background-color: #6A95CC;
+    border: 1px solid #000080;
+    padding: 8px;
+    border-radius: 6px;
+}
+section.container form div.form-field select option {}
