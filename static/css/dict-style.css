@@ -112,36 +112,39 @@ section.container div.box div.heading  h3 {
     font-size: 24px;
     color:  #228B22;
 }
-section.container form {
+section.container div.box form {
     width: 100%;
-    border: 2px solid  #228B22;
-    padding: 6px;
     border-radius: 8px;
     margin: 30px 0;
 }
-section.container form div.form-field {
+section.container div.box form div.form-field {
     display: flex;
     position: relative;
+    border: 2px solid  #228B22;
+    padding: 6px;
+    border-radius: 8px;
+   
 }
-section.container form div.form-field input {
+section.container div.box form div.form-field input {
     flex: 1;
     height:40px ;
     border: none;
     background: #fff;
     font-size: 18px;
 }
-section.container form div.form-field input:focus{
+section.container div.box form div.form-field input:focus{
     border: none;
     outline: none;
 }
-section.container form div.form-field button {
-    height:40px ;
+section.container div.box form div.form-field button {
+    height:30px ;
     position: absolute;
-    right: 0;
+    top: 11px;
+    right: 20px;
     border: none;
     background: #fff;
 }
-section.container form div.form-field button img {
+section.container div.box form div.form-field button img {
     height: 100%;
 }
 

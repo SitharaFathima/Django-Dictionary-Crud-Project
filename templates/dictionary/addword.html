@@ -1,15 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        {% load static %}
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>{{title}}</title>
-        <link rel="shortcut icon" href="{% static './images/logo.png' %}"> 
-        <link rel="stylesheet" href="{% static './css/add.css' %}" />
-    </head>
-    <body>
+{% extends "dictionary/base.html" %}
+{% load static %}
+{% block content %}
+
         <section class="container one">
             <form action="{% url 'dictionary:create_word' %}" method="post" >
                 {% csrf_token %}
@@ -35,5 +27,4 @@
                 </div>
             </form>
         </section>
-    </body>
-</html>
+        {% endblock %}
