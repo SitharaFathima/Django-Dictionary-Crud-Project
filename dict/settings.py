@@ -57,16 +57,6 @@ WSGI_APPLICATION = 'dict.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-#         'NAME': 'dictionary',
-#         "USER":"junaid",
-#         "PASSWORD":"admin",
-#         "HOST":"localhost",
-#         "PORT":"",
-#     }
-# }
 DATABASES = {
     'default': {
         
