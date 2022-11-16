@@ -18,7 +18,7 @@ a{
     text-decoration: none;
 }
 #home{
-    height: 92vh;
+    height: 91vh;
 }
 section.container {
    
@@ -167,8 +167,9 @@ ul.result p.error {
     font-size: 24px;
 }
 footer{
-    padding: 24px;
+    padding: 30px 0;
     background-color: #E3E3E3;
+    
 }
 footer section.bottom{
     
