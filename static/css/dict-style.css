@@ -17,6 +17,9 @@ ul{
 a{
     text-decoration: none;
 }
+#home{
+    height: 92vh;
+}
 section.container {
    
 }
@@ -162,4 +165,21 @@ ul.result p.error {
     color: red;
     text-align: center;
     font-size: 24px;
+}
+footer{
+    padding: 24px;
+    background-color: #E3E3E3;
+}
+footer section.bottom{
+    
+}
+footer section.bottom p.footer{
+    text-align: center;
+    color:#228B22;
+    font-size: 16px;
+}
+footer section.bottom p.footer a{
+    color:#228B22;
+    font-size: 12px;
+    font-weight: bold;
 }

@@ -11,71 +11,77 @@
         <link rel="stylesheet" href="{% static './css/dict-style.css' %}" />
     </head>
     <body>
-        <section class="container">
-            <header>
-                <h1 class="left">
-                    <a href="{% url 'dictionary:index' %}">
-                        <img
-                            src="{% static 'images/logo.png' %}"
-                            alt="Logo"
-                        />
-                    </a>
-                </h1>
-                <nav>
-                    <ul class="items">
-                        <li>
-                            <a href="{% url 'dictionary:index' %}">Home</a>
-                        </li>
-                        <li>
-                            <a href="{% url 'dictionary:index' %}">Dictionary</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="right">
-                    {% if request.user.is_authenticated %}
-                        <span class="one">{{request.user.first_name}} {{request.user.last_name}}</span>
-                        <a href="{% url 'users:logout' %}" class="login"> Logout </a>
-                    {% else %}
-                        <a href="{% url 'users:login' %}" class="login"> Login </a>
-                    {% endif %}
-                <div>
-            </header>
-            <div class="box">
-                <h2 class="main">DICTIONARY MEANINGS</h2>
-                <p class="main">Find the definition of a word</p>
-                <div class="heading">
-                    <h3>What word do you want to look up?</h3>
-                    <a class="button" href="{% url 'dictionary:create_word' %}">Add Word</a>
-                </div>
-                <form action="" method="post">
-                    {% csrf_token %}
-                    <div class="form-field">
-                        <input type="text" placeholder="Search for a word..." name="search_word" />
-                        <button type="submit" class="submit-btn">
-                            <img src="{% static './images/search-icon.png' %}" alt="Search" />
-                        </button>
-                    </div>
-                </form>
-                <ul class="result" >
-                    {% if show %}
-                        <h2>{{word}}</h2>
-                        {% if error_msg %}
-                            <p class="error">{{error_msg}}</p>
-                        {% endif %}
-                        {% for meaning in meanings %}
+        <section id="home">
+            <section class="container">
+                <header>
+                    <h1 class="left">
+                        <a href="{% url 'dictionary:index' %}">
+                            <img
+                                src="{% static 'images/logo.png' %}"
+                                alt="Logo"
+                            />
+                        </a>
+                    </h1>
+                    <nav>
+                        <ul class="items">
                             <li>
-                                Meaning: {{meaning.meaning}}
+                                <a href="{% url 'dictionary:index' %}">Home</a>
                             </li>
-                        {% endfor %}
-                    {% else %}
-                        <li>
-                            <h2>Search a word</h2>
-                        </li>
-                    {% endif %}
-                </ul>
-            </div>
-            
-        </section>
-        
+                            <li>
+                                <a href="{% url 'dictionary:index' %}">Dictionary</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="right">
+                        {% if request.user.is_authenticated %}
+                            <span class="one">{{request.user.first_name}} {{request.user.last_name}}</span>
+                            <a href="{% url 'users:logout' %}" class="login"> Logout </a>
+                        {% else %}
+                            <a href="{% url 'users:login' %}" class="login"> Login </a>
+                        {% endif %}
+                    <div>
+                </header>
+                <div class="box">
+                    <h2 class="main">DICTIONARY MEANINGS</h2>
+                    <p class="main">Find the definition of a word</p>
+                    <div class="heading">
+                        <h3>What word do you want to look up?</h3>
+                        <a class="button" href="{% url 'dictionary:create_word' %}">Add Word</a>
+                    </div>
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <div class="form-field">
+                            <input type="text" placeholder="Search for a word..." name="search_word" />
+                            <button type="submit" class="submit-btn">
+                                <img src="{% static './images/search-icon.png' %}" alt="Search" />
+                            </button>
+                        </div>
+                    </form>
+                    <ul class="result" >
+                        {% if show %}
+                            <h2>{{word}}</h2>
+                            {% if error_msg %}
+                                <p class="error">{{error_msg}}</p>
+                            {% endif %}
+                            {% for meaning in meanings %}
+                                <li>
+                                    Meaning: {{meaning.meaning}}
+                                </li>
+                            {% endfor %}
+                        {% else %}
+                            <li>
+                                <h2>Search a word</h2>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                
+            </section>
+        </section> 
+        <footer>
+            <section class="bottom">
+                <p class="footer">Copyright &copy; <a href="">DICTIONARY MEANINGS</a></p>
+            </section>
+        </footer>
     </body>
 </html>
