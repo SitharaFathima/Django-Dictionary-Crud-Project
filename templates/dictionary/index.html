@@ -21,6 +21,16 @@
                         />
                     </a>
                 </h1>
+                <nav>
+                    <ul class="items">
+                        <li">
+                            <a href="{% url 'dictionary:index' %}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{% url 'dictionary:index' %}">Dictionary</a>
+                        </li>
+                    </ul>
+                </nav>
                 <div class="right">
                     {% if request.user.is_authenticated %}
                         <span class="one">{{request.user.first_name}} {{request.user.last_name}}</span>
