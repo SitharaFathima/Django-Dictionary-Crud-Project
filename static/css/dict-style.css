@@ -85,7 +85,7 @@ section.container div.box div.heading a.button {
     font-weight: 900;
 }
 section.container div.box div.heading  h3 {
-    font-size: 20px;
+    font-size: 24px;
     color:  #228B22;
 }
 section.container form {
@@ -125,12 +125,13 @@ ul.result {
     list-style: none;
 }
 ul.result li {
-    color: #228B22;
+    font-size: 22px;
+    color: #000080;
 }
 ul.result h2 {
     color: #228B22;
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 26px;
+    margin-bottom: 25px;
     text-decoration: underline;
 }
 ul.result li p {
