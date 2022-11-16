@@ -11,6 +11,12 @@
     box-sizing: border-box;
     font-family: "gorditaregular";
 }
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
 section.container {
    
 }
@@ -31,6 +37,21 @@ section.container header h1.left a {
 section.container header h1.left a img{
     display: block;
     width: 100%;
+}
+section.container nav ul.items{
+    display: flex;
+    justify-content: space-between;
+}
+section.container nav ul.items li{
+    margin-right: 15px;
+}
+section.container nav ul.items li:last-child{
+    margin-right: 0px;
+}
+section.container nav ul.items li a{
+   color: #228B22;
+   font-size: 16px;
+   font-weight: bold;
 }
 section.container  header a.login {
     background-color:  #228B22;
