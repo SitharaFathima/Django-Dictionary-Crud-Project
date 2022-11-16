@@ -62,6 +62,12 @@ section.container div.box h2.main{
     font-size: 30px;
     color: #000080;
     text-align: center;
+    margin-bottom: 20px;
+}
+section.container div.box p{
+    font-size: 16px;
+    color: #808080;
+    text-align: center;
     margin-bottom: 70px;
 }
 section.container div.box div.heading {
